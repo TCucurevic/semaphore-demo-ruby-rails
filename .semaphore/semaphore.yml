@@ -5,11 +5,11 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Setup
+  - name: Features coming
     dependencies: []
     task:
       jobs:
-        - name: bundle
+        - name: Our plans
           commands:
             - sem-version ruby 2.7.3
             - sem-version node 14.16.1
@@ -19,7 +19,7 @@ blocks:
             - cache store
   - name: Code scanning
     dependencies:
-      - Setup
+      - Features coming
     task:
       jobs:
         - name: check style + security
